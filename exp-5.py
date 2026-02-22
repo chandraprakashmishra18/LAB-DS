@@ -16,13 +16,13 @@
     # 3. Practical risk of exponential algorithms?
     
 # SOLUTION :
-def hanoi(n, source, aux, dest):
+def hanoi(n, source, help, dest):
     if n == 1:
         print(f"Move disk 1 from {source} to {dest}")
         return
-    hanoi(n-1, source, dest, aux)
+    hanoi(n-1, source, dest, help)
     print(f"Move disk {n} from {source} to {dest}")
-    hanoi(n-1, aux, source, dest)
+    hanoi(n-1, help, source, dest)
 
 hanoi(3, 'A', 'B', 'C')
 

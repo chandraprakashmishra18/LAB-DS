@@ -14,19 +14,21 @@
 # 3. Divide & Conquer meaning?
 
 # SOLUTION : 
-def bin_search( arr , low , high , key ):
+def binary_search(arr, key, low, high):
     if low > high:
-        return -1 
-    mid = (low + high)//2
+        return -1
+
+    mid = (low + high) // 2
+
     if arr[mid] == key:
         return mid
     elif key < arr[mid]:
-        return bin_search( arr , low , high , mid -1 )
-    else :
-        return bin_search( arr , key , mid + 1 , high)
-    
-arr = [ 1 , 5 , 6 , 8 , 3 , 7 , 9 ]
-print(bin_search(arr, 7, 0, len(arr)-1))
+        return binary_search(arr, key, low, mid - 1)
+    else:
+        return binary_search(arr, key, mid + 1, high)
+
+arr = [1, 3, 5, 7, 9]
+print(binary_search(arr, 7, 0, len(arr)-1))
 
 # Recurrence Relation :
     # T(n) = T(n/2) + O(1)

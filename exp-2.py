@@ -51,11 +51,11 @@
     
 def single_loop(n):
     count = 0 
-for i in range(n):
-    count += 1
-print("Single Loop Operations:", count)
-print("Complexity: O(n)")
-print("Reason: Loop runs n times\n")
+    for i in range(n):
+        count += 1
+    print("Single Loop Operations:", count)
+    print("Complexity: O(n)")
+    print("Reason: Loop runs n times\n")
 
 
 

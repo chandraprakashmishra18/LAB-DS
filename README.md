@@ -139,7 +139,7 @@ LAB-DS/
 
 ## 👨‍💻 Author
 
-**Chandraprakash Mishra**
+**Chandra Prakash Mishra**
 
 ---
 

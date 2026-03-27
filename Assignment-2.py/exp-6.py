@@ -15,21 +15,68 @@
 
 # Solution :
 
-stack = []
+# Node class
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
 
-def check_parentheses(exp):
-    for ch in exp:
-        if ch == '(':
-            stack.append(ch)
-        elif ch == ')':
-            if not stack:
-                return "Unbalanced"
-            stack.pop()
 
-    if not stack:
-        return "Balanced"
-    else:
-        return "Unbalanced"
+# Stack using Linked List
+class Stack:
+    def __init__(self):
+        self.top = None
 
-expr = "(a+b)*(c+d)"
-print(check_parentheses(expr))
+    def push(self, data):
+        new_node = Node(data)
+        new_node.next = self.top
+        self.top = new_node
+
+    def pop(self):
+        if self.top is None:
+            return None
+        temp = self.top
+        self.top = self.top.next
+        return temp.data
+
+    def peek(self):
+        if self.top is None:
+            return None
+        return self.top.data
+
+    def is_empty(self):
+        return self.top is None
+
+
+# Function to validate brackets
+def is_valid(expr):
+    stack = Stack()
+
+    pairs = {
+        ')': '(',
+        ']': '[',
+        '}': '{'
+    }
+
+    for ch in expr:
+        if ch in "([{":
+            stack.push(ch)
+
+        elif ch in ")]}":
+            if stack.is_empty():
+                return False
+
+            top = stack.pop()
+
+            if top != pairs[ch]:
+                return False
+
+    return stack.is_empty()
+
+
+# Driver code
+n = int(input("Enter number of test cases: "))
+
+for _ in range(n):
+    s = input("Enter string: ")
+    print(is_valid(s))

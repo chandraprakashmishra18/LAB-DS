@@ -14,35 +14,55 @@
 #    3. Why pop-end is O(1)?
 
 #   Solution :
-
 class DynamicArray:
     def __init__(self):
-        self.data = []
+        self.size = 0
+        self.capacity = 1
+        self.arr = [0] * self.capacity
 
-    def append(self, value):
-        self.data.append(value)
+    def append(self, x):
+        # Resize if full
+        if self.size == self.capacity:
+            self.capacity *= 2
+            new_arr = [0] * self.capacity
+            for i in range(self.size):
+                new_arr[i] = self.arr[i]
+            self.arr = new_arr
+            print("Resized to", self.capacity)
+
+        self.arr[self.size] = x
+        self.size += 1
+        print("Added:", x, "| Size:", self.size, "| Capacity:", self.capacity)
 
     def pop(self):
-        if len(self.data) == 0:
+        if self.size == 0:
             print("Underflow")
-        else:
-            return self.data.pop()
+            return
+        self.size -= 1
+        print("Removed | Size:", self.size, "| Capacity:", self.capacity)
 
-    def display(self):
-        print(self.data)
 
-arr = DynamicArray()
+# -------- DRIVER CODE --------
+d = DynamicArray()
 
-arr.append(10)
-arr.append(20)
-arr.append(30)
+d.append(60)
+d.append(45)
+d.append(80)
+d.append(20)
 
-arr.display()
+d.pop()
 
-arr.pop()
-arr.display()
+#           Observation
+# ---------------------------------------
+# Capacity doubles when array becomes full
+# Resize happens rarely
+# Most appends take constant time
+# ----------------------------------------------------------
+# ----------------------------------------------------------
 
-# Complexity
-
-# Append → Amortized O(1)
-# Pop → O(1)
+#           Conclusion
+# ------------------------------------
+# Dynamic arrays use resizing strategy (doubling) to maintain efficient performance.
+# Append is amortized O(1), while pop from end is O(1).
+# ------------------------------------------------------------
+# ------------------------------------------------------------

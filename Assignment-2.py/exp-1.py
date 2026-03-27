@@ -1,5 +1,3 @@
-# Experiment 7:
-#   Arrays 1D (Operations + Shifting Cost)
 # Aim :
 #   Understand how insert/delete in arrays causes shifting and impacts complexity.
 # What you will implement (in lab)
@@ -16,23 +14,62 @@
 
 # SOLUTION :
 
-arr = [5,10,15,20,25]
+def insert_array(arr, pos, value):
+    n = len(arr)
+    shifts = n - pos  # elements to shift right 
+    arr.insert(pos, value)
 
-# Insert at position
-pos = 2
-val = 8
+    # Time Complexity
+    if pos == n:
+        complexity = "O(1)"
+    else:
+        complexity = "O(n)"
 
-arr.insert(pos, val)
-print("Array after insertion:", arr)
+    return arr, shifts, complexity
 
-# Delete element
-del arr[pos]
-print("Array after deletion:", arr)
 
-            # TIME COMPLEXITY
-# | Operation           | Time Complexity |
-# | ------------------- | --------------- |
-# | Insert at beginning | O(n)            |
-# | Insert at middle    | O(n)            |
-# | Insert at end       | O(1)            |
-# | Delete              | O(n)            |
+def delete_array(arr, pos):
+    n = len(arr)
+    shifts = n - pos - 1  # elements to shift left that's why we'll use -1 as well here 
+    arr.pop(pos)
+
+    # Time Complexity
+    if pos == n - 1:
+        complexity = "O(1)"
+    else:
+        complexity = "O(n)"
+
+    return arr, shifts, complexity
+
+# ----------- DRIVER CODE -----------
+
+arr = [10, 20, 30, 40]
+
+print("Original Array:", arr)
+
+# Insert operations
+print("\n--- INSERT OPERATIONS ---")
+print("Insert at Start:", insert_array(arr.copy(), 0, 5))
+print("Insert at Middle:", insert_array(arr.copy(), 2, 25))
+print("Insert at End:", insert_array(arr.copy(), len(arr), 50))
+
+# Delete operations
+print("\n--- DELETE OPERATIONS ---")
+print("Delete at Start:", delete_array(arr.copy(), 0))
+print("Delete at Middle:", delete_array(arr.copy(), 2))
+print("Delete at End:", delete_array(arr.copy(), len(arr)-1))
+
+#              Observation Table
+        #     -------------------
+# Operation	            |   Shift Count	  |  Time Complexity
+# --------------------- | --------------- | -------------------
+# Insert at Start	    |    n	          |      O(n)
+# Insert at Middle	    |    n/2	      |      O(n)
+# Insert at End	        |    0	          |      O(1)
+# Delete at Start	    |    n-1	      |      O(n)
+# Delete at Middle	    |    n/2 	      |      O(n)
+# Delete at End	        |    0	          |      O(1)
+
+# Operations at the start and middle require shifting, hence O(n) complexity.
+# Operations at the end do not require shifting, hence O(1) complexity.
+# This demonstrates why arrays are inefficient for frequent insertions/deletions except at the end.

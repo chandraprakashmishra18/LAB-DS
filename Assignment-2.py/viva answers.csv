@@ -1,0 +1,111 @@
+------------------------------------------------------------------------------
+
+ ------
+|EXP-1:|
+ ------
+
+Question,Answer
+------------------------------------------------------------------------------
+Why index access is O(1)?,"Index access in an array is O(1) because the memory address of any element can be calculated directly using the formula: Address = Base + (index × size of element). No traversal is needed."
+------------------------------------------------------------------------------
+Why insertion at start is O(n)?,"Insertion at the start of an array is O(n) because all existing elements must be shifted one position to the right to make space for the new element, resulting in n operations."
+------------------------------------------------------------------------------
+Static vs dynamic arrays?,"Static arrays have fixed size and are allocated in contiguous memory at compile time, while dynamic arrays can resize at runtime, are allocated in heap memory, and provide more flexibility but may involve reallocation."
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+ ------
+|EXP-2:|
+ ------
+
+-----------
+Question,Answer
+------------------------------------------------------------------------------
+Complexity of scanning a matrix?,"The complexity of scanning a matrix of size m × n is O(m × n) because each element must be visited once during traversal."
+------------------------------------------------------------------------------
+Real-world use of 2D arrays?,"2D arrays are used to represent tabular data such as matrices, spreadsheets, images (pixels), game boards, and seating arrangements."
+-----------------------------------------------------------------------------
+Memory layout idea (row-wise)?,"In row-wise (row-major) storage, elements of each row are stored in contiguous memory locations. The address is calculated as: Address = Base + ((row × number of columns + column) × size of element)."
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+ ------
+|EXP-3:|
+ ------
+
+-----------
+Question,Answer
+-------------------------
+What is amortized complexity?,"Amortized complexity is the average time per operation over a sequence of operations, ensuring that occasional expensive operations do not affect overall performance significantly."
+-------------------------------------------------------------------
+Why doubling helps?,"Doubling the capacity reduces the number of resizing operations. Although resizing takes O(n) time, it happens rarely, so the average cost per append becomes O(1)."
+---------------------------------------------------------------------
+Why pop-end is O(1)?,"Pop operation at the end is O(1) because it simply removes the last element without shifting any other elements."
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+
+ ------
+|EXP-4:|
+ ------
+
+-----------
+Question,Answer
+-------------------------
+Why search is O(n)?,"Search in a singly linked list is O(n) because elements are not stored in contiguous memory, so traversal must be done node by node until the target value is found or the list ends."
+----------------------------------------------------------------------
+Why insert-at-head is O(1)?,"Insertion at the head is O(1) because it only requires creating a new node and updating its next pointer to the current head, followed by updating the head reference."
+-----------------------------------------------------------------------
+Node structure?,"A node in a singly linked list consists of two parts: data (to store the value) and a pointer (next) that stores the address of the next node in the list."
+
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+
+ ------
+|EXP-5:|
+ ------
+
+-----------
+Question,Answer
+-------------------------
+DLL advantage over SLL?,"A doubly linked list allows traversal in both directions (forward and backward) due to prev and next pointers, making operations like deletion and reverse traversal more efficient compared to a singly linked list."
+-----------------------------------------------------------------------
+Browser history mapping?,"Browser history can be implemented using a doubly linked list where each page is a node. The prev pointer moves to the previous page (back button) and the next pointer moves to the next page (forward button)."
+-----------------------------------------------------------------------
+Deletion ease in DLL?,"Deletion in a doubly linked list is easier because each node has a pointer to its previous node, so there is no need to traverse from the head to find the previous node, unlike in a singly linked list."
+
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+
+ ------
+|EXP-6:|
+ ------
+
+-----------
+Question,Answer
+-------------------------
+Why stack is ideal here?,"Stack follows LIFO (Last In First Out), which matches the requirement of bracket validation where the last opened bracket must be closed first."
+---------------------------------------------------------------------
+What fails in ""([)]""?","In ""([)]"", the order of closing brackets does not match the last opened bracket. The stack expects ']' after '[', but ')' appears first, causing a mismatch."
+-----------------------------------------------------------------------
+Underflow meaning?,"Underflow occurs when a pop or peek operation is performed on an empty stack, meaning there are no elements to access or remove."
+
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+
+ ------
+|EXP-7:|
+ ------
+
+Question,Answer
+-------------------------
+Why BFS uses queue?,"BFS (Breadth First Search) uses a queue because it explores nodes level by level, processing nodes in the order they are discovered, which follows FIFO behavior."
+-----------------------------------------------------------------------
+FIFO meaning?,"FIFO stands for First In First Out, meaning the element inserted first is the first one to be removed, just like a queue."
+-----------------------------------------------------------------------
+Scheduling example?,"A real-world example of FIFO scheduling is task scheduling in operating systems or printer queues, where tasks are processed in the order they arrive."
+
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------

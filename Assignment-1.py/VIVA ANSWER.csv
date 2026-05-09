@@ -1,0 +1,24 @@
+Experiment,Question,Answer
+Experiment 1 - Stack ADT,What is an Abstract Data Type (ADT)?,"An Abstract Data Type (ADT) is a logical description of a data structure that defines the operations and their behavior without specifying implementation. It focuses on functionality rather than implementation. Example: Stack ADT defines push, pop, and peek."
+Experiment 1 - Stack ADT,Why are push and pop operations O(1)?,"Push and pop operate only on the top element and do not require traversal or shifting. Hence, time complexity is constant: O(1)."
+Experiment 1 - Stack ADT,Give one real-world use of stack,"Stacks are used in function call management where calls are stored in a call stack and executed in LIFO order."
+
+Experiment 2 - Complexity Analysis,What is the difference between Big-O and Big-Theta notation?,"Big-O represents upper bound (worst-case), while Big-Theta represents exact growth (both upper and lower bounds)."
+Experiment 2 - Complexity Analysis,What does worst-case complexity represent?,"It represents the maximum number of operations an algorithm performs for input size n."
+Experiment 2 - Complexity Analysis,Why is complexity analysis important?,"It helps select efficient algorithms, predict performance, reduce execution time, and build scalable systems."
+
+Experiment 3 - Recursive Factorial,What is recursion depth?,"Recursion depth is the maximum number of recursive calls present in the call stack at once."
+Experiment 3 - Recursive Factorial,Why does recursion use stack memory?,"Each call stores parameters, local variables, and return address in the call stack."
+Experiment 3 - Recursive Factorial,When is iteration preferred over recursion?,"When recursion depth is large, stack memory is limited, or function call overhead must be avoided."
+
+Experiment 4 - Fibonacci,Why is naive recursive Fibonacci inefficient?,"It recalculates the same values multiple times, causing exponential time complexity."
+Experiment 4 - Fibonacci,How is memoization related to dynamic programming?,"Memoization stores results of subproblems to avoid recomputation, a key DP technique."
+Experiment 4 - Fibonacci,What is the space impact of memoization?,"It requires extra space O(n) to store computed values."
+
+Experiment 5 - Tower of Hanoi,Why is number of moves 2^n - 1?,"Because T(n) = 2T(n-1) + 1, solving gives 2^n - 1 moves."
+Experiment 5 - Tower of Hanoi,What is a recursion tree?,"A diagram showing recursive calls as a tree structure."
+Experiment 5 - Tower of Hanoi,What is the risk of exponential algorithms?,"They grow very fast and become impractical due to high time and resource usage."
+
+Experiment 6 - Binary Search,Why must data be sorted?,"Binary search relies on ordered data to eliminate half of the search space each step."
+Experiment 6 - Binary Search,What are complexities of binary search?,"Best: O(1), Average: O(log n), Worst: O(log n)."
+Experiment 6 - Binary Search,What is divide and conquer?,"A method where a problem is divided into smaller parts, solved separately, and combined."

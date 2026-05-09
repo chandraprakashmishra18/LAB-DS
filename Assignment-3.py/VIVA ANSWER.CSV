@@ -1,0 +1,24 @@
+Experiment,Question,Answer
+Exp 14,O(n^2) why slow?,Because comparisons grow quadratically with input size
+Exp 14,Stable vs unstable?,Stable keeps order of equal elements
+Exp 14,In-place meaning?,Uses constant extra memory
+
+Exp 15,Worst case input?,Reverse sorted array
+Exp 15,Is insertion stable?,Yes it maintains order
+Exp 15,Space complexity?,O(1)
+
+Exp 16,Why merge sort stable?,Because equal elements preserve order during merge
+Exp 16,Why extra memory?,Needs auxiliary arrays
+Exp 16,Where used?,External sorting
+
+Exp 17,Worst case quick sort?,Sorted array with bad pivot
+Exp 17,Is quick sort stable?,No
+Exp 17,Average time?,O(n log n)
+
+Exp 18,Why heap sort not stable?,Heap structure changes order
+Exp 18,Heap vs BST?,Heap better for priority
+Exp 18,Use case?,Priority queue
+
+Exp 19,Why reverse worst for insertion?,Maximum shifts required
+Exp 19,Quick sort degrade?,Bad pivot selection
+Exp 19,Merge memory?,Uses extra array space

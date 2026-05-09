@@ -6,7 +6,7 @@
 
 Question,Answer
 ------------------------------------------------------------------------------
-Why index access is O(1)?,"Index access in an array is O(1) because the memory address of any element can be calculated directly using the formula: Address = Base + (index × size of element). No traversal is needed."
+Why index access is O(1)?,"Index access in an array is O(1) because the memory address of any element can be calculated directly using the formula: Address = Base + (index * size of element). No traversal is needed."
 ------------------------------------------------------------------------------
 Why insertion at start is O(n)?,"Insertion at the start of an array is O(n) because all existing elements must be shifted one position to the right to make space for the new element, resulting in n operations."
 ------------------------------------------------------------------------------
@@ -22,11 +22,11 @@ Static vs dynamic arrays?,"Static arrays have fixed size and are allocated in co
 -----------
 Question,Answer
 ------------------------------------------------------------------------------
-Complexity of scanning a matrix?,"The complexity of scanning a matrix of size m × n is O(m × n) because each element must be visited once during traversal."
+Complexity of scanning a matrix?,"The complexity of scanning a matrix of size m * n is O(m * n) because each element must be visited once during traversal."
 ------------------------------------------------------------------------------
 Real-world use of 2D arrays?,"2D arrays are used to represent tabular data such as matrices, spreadsheets, images (pixels), game boards, and seating arrangements."
 -----------------------------------------------------------------------------
-Memory layout idea (row-wise)?,"In row-wise (row-major) storage, elements of each row are stored in contiguous memory locations. The address is calculated as: Address = Base + ((row × number of columns + column) × size of element)."
+Memory layout idea (row-wise)?,"In row-wise (row-major) storage, elements of each row are stored in contiguous memory locations. The address is calculated as: Address = Base + ((row * number of columns + column) * size of element)."
 
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------

@@ -1,0 +1,36 @@
+Experiment,Question,Answer
+Exp 20,Why inorder gives sorted?,Because BST left < root < right property
+Exp 20,Worst-case BST height?,O(n)
+Exp 20,Average complexity?,O(log n)
+
+Exp 21,Inorder successor?,Smallest in right subtree
+Exp 21,Why delete tricky?,Multiple cases handling
+Exp 21,Verification?,Check inorder sorted
+
+Exp 22,Why heap for PQ?,Fast min/max access
+Exp 22,Complexity?,Insert O(log n), Extract O(log n)
+Exp 22,Industry use?,Scheduling systems
+
+Exp 23,List vs matrix?,List saves space
+Exp 23,Directed vs undirected?,Edges direction matters
+Exp 23,Weighted graph use?,Shortest path problems
+
+Exp 24,Why queue in BFS?,Level-order traversal
+Exp 24,Shortest path?,Yes in unweighted graph
+Exp 24,Complexity?,O(V+E)
+
+Exp 25,DFS vs BFS?,DFS deep, BFS level
+Exp 25,Recursion issue?,Stack overflow risk
+Exp 25,Use case?,Cycle detection
+
+Exp 26,Collision?,Same index for keys
+Exp 26,Why chaining?,Handles collisions
+Exp 26,Load factor?,Elements / table size
+
+Exp 27,Trie vs hashmap?,Trie better for prefix
+Exp 27,Space tradeoff?,High memory usage
+Exp 27,Use?,Autocomplete
+
+Exp 28,False negatives?,No
+Exp 28,Memory efficient?,Uses bit array
+Exp 28,Use?,Databases, caching
